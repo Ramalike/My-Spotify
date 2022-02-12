@@ -22,13 +22,14 @@
 		4F68452227B8074300599966 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F68452127B8074300599966 /* PlayerViewController.swift */; };
 		4F68452427B8075100599966 /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F68452327B8075100599966 /* PlaylistViewController.swift */; };
 		4F68452627B8076B00599966 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F68452527B8076B00599966 /* SearchResultViewController.swift */; };
-		4F68452827B8079700599966 /* AuthManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F68452727B8079700599966 /* AuthManagerViewController.swift */; };
-		4F68452A27B813FA00599966 /* APIColler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F68452927B813FA00599966 /* APIColler.swift */; };
+		4F68452A27B813FA00599966 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F68452927B813FA00599966 /* APICaller.swift */; };
 		4F68452C27B8140700599966 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F68452B27B8140700599966 /* HapticsManager.swift */; };
 		4F68453027B8143B00599966 /* PlayListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F68452F27B8143B00599966 /* PlayListModel.swift */; };
 		4F68453327B8146000599966 /* AudioTrackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F68453227B8146000599966 /* AudioTrackModel.swift */; };
 		4F68453527B8146D00599966 /* ArtistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F68453427B8146D00599966 /* ArtistModel.swift */; };
 		4F68453727B8148100599966 /* UserProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F68453627B8148100599966 /* UserProfileModel.swift */; };
+		4F68453927B8284E00599966 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F68453827B8284E00599966 /* AuthManager.swift */; };
+		4F68453B27B842B000599966 /* Exstension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F68453A27B842B000599966 /* Exstension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,13 +50,14 @@
 		4F68452127B8074300599966 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		4F68452327B8075100599966 /* PlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
 		4F68452527B8076B00599966 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
-		4F68452727B8079700599966 /* AuthManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManagerViewController.swift; sourceTree = "<group>"; };
-		4F68452927B813FA00599966 /* APIColler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIColler.swift; sourceTree = "<group>"; };
+		4F68452927B813FA00599966 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		4F68452B27B8140700599966 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		4F68452F27B8143B00599966 /* PlayListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListModel.swift; sourceTree = "<group>"; };
 		4F68453227B8146000599966 /* AudioTrackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTrackModel.swift; sourceTree = "<group>"; };
 		4F68453427B8146D00599966 /* ArtistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistModel.swift; sourceTree = "<group>"; };
 		4F68453627B8148100599966 /* UserProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileModel.swift; sourceTree = "<group>"; };
+		4F68453827B8284E00599966 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		4F68453A27B842B000599966 /* Exstension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exstension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,8 +128,8 @@
 		4F68450F27B7FE8A00599966 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				4F68452727B8079700599966 /* AuthManagerViewController.swift */,
-				4F68452927B813FA00599966 /* APIColler.swift */,
+				4F68453827B8284E00599966 /* AuthManager.swift */,
+				4F68452927B813FA00599966 /* APICaller.swift */,
 				4F68452B27B8140700599966 /* HapticsManager.swift */,
 			);
 			path = Managers;
@@ -139,6 +141,7 @@
 				4F6844F827B7FC6F00599966 /* AppDelegate.swift */,
 				4F6844FA27B7FC6F00599966 /* SceneDelegate.swift */,
 				4F68450127B7FC7000599966 /* Assets.xcassets */,
+				4F68453A27B842B000599966 /* Exstension.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -258,15 +261,16 @@
 				4F68452C27B8140700599966 /* HapticsManager.swift in Sources */,
 				4F68451E27B8073200599966 /* SettingViewController.swift in Sources */,
 				4F6844F927B7FC6F00599966 /* AppDelegate.swift in Sources */,
+				4F68453927B8284E00599966 /* AuthManager.swift in Sources */,
 				4F68452427B8075100599966 /* PlaylistViewController.swift in Sources */,
 				4F68453027B8143B00599966 /* PlayListModel.swift in Sources */,
 				4F68451627B805D900599966 /* LibraryViewController.swift in Sources */,
 				4F68453327B8146000599966 /* AudioTrackModel.swift in Sources */,
+				4F68453B27B842B000599966 /* Exstension.swift in Sources */,
 				4F68452227B8074300599966 /* PlayerViewController.swift in Sources */,
 				4F68453727B8148100599966 /* UserProfileModel.swift in Sources */,
-				4F68452A27B813FA00599966 /* APIColler.swift in Sources */,
+				4F68452A27B813FA00599966 /* APICaller.swift in Sources */,
 				4F68452627B8076B00599966 /* SearchResultViewController.swift in Sources */,
-				4F68452827B8079700599966 /* AuthManagerViewController.swift in Sources */,
 				4F6844FB27B7FC6F00599966 /* SceneDelegate.swift in Sources */,
 				4F68453527B8146D00599966 /* ArtistModel.swift in Sources */,
 			);
