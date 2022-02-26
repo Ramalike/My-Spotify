@@ -14,6 +14,7 @@ final class AuthManager {
     
     struct Constants {
         static let clientId = "50bd57d9984d41eba7a615a081bd011b"
+        static let tokenAPIURL = "https://accounts.spotify.com/api/token"
         static let clientSecret = "beda80d400aa4a309179c9d6cf0ceaa9"
     }
     
@@ -43,6 +44,32 @@ final class AuthManager {
     
     public func exchangeCodeForToken(code: String, complition: @escaping(Bool) -> Void) {
         //get token
+        
+        guard let url = URL(string: Constants.tokenAPIURL) else { return }
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+       var components = URLComponents()
+        components.queryItems = [
+            URLQueryItem(name: "grant_type", value : "authorization_code"),
+            URLQueryItem(name: "code", value : code),
+            URLQueryItem(name: "redirect_uri", value : "https://instagram.com/ramalike")
+        ]
+        
+        URLSession.shared.dataTask(with: request) { data, _, error in
+            guard let data = data, error == nil else {
+               complition(false)
+                return
+            }
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed)
+                print(json)
+            }
+            catch {
+                print(error)
+                complition(false)
+            }
+        }
     }
     public func refreshAccessToken() {
         

@@ -50,5 +50,9 @@ class AuthViewController: UIViewController, WKNavigationDelegate {
             return
         }
         print("Code:\(code)")
+        AuthManager.shared.exchangeCodeForToken(code: code) { [weak self] success in
+            self?.navigationController?.popToRootViewController(animated: true)
+            self?.completionHandler?(success)
+        }
     }
 }
